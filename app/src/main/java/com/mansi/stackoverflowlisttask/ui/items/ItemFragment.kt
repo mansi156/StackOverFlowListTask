@@ -3,35 +3,25 @@ package com.mansi.stackoverflowlisttask.ui.items
 import android.content.res.AssetManager
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout.GONE
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener
 import com.bumptech.glide.Glide
-import com.google.gson.Gson
 import com.mansi.stackoverflowlisttask.R
 import com.mansi.stackoverflowlisttask.data.entities.Items
 import com.mansi.stackoverflowlisttask.data.entities.ItemsList
-import com.mansi.stackoverflowlisttask.databinding.ItemListBinding
 import com.mansi.stackoverflowlisttask.databinding.ItemsFragmentBinding
 import com.mansi.stackoverflowlisttask.di.AppModule
 import com.mansi.stackoverflowlisttask.utils.Resource
 import com.mansi.stackoverflowlisttask.utils.autoCleared
 import com.squareup.moshi.JsonAdapter
-import com.squareup.moshi.KotlinJsonAdapterFactory
-import com.squareup.moshi.Moshi
 import dagger.hilt.android.AndroidEntryPoint
-import java.io.File
 
 
 @AndroidEntryPoint

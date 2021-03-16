@@ -1,7 +1,6 @@
 package com.mansi.stackoverflowlisttask.ui.items
 
 import android.annotation.SuppressLint
-import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,10 +8,9 @@ import androidx.core.text.HtmlCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CircleCrop
+import com.google.android.material.chip.Chip
 import com.mansi.stackoverflowlisttask.data.entities.Items
 import com.mansi.stackoverflowlisttask.databinding.ItemListBinding
-import com.mansi.stackoverflowlisttask.utils.CommonUtils
-import com.google.android.material.chip.Chip
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -50,8 +48,8 @@ class ItemsAdapter(private val listener: ItemsItemListener) : RecyclerView.Adapt
 }
 
     class ItemViewHolder(
-        val itemBinding: ItemListBinding,
-        private val listener: ItemsAdapter.ItemsItemListener
+            private val itemBinding: ItemListBinding,
+            private val listener: ItemsAdapter.ItemsItemListener
     ) : RecyclerView.ViewHolder(itemBinding.root),View.OnClickListener {
 
     private lateinit var item: Items
