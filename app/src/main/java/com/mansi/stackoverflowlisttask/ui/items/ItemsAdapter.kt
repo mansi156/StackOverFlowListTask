@@ -87,7 +87,7 @@ class ItemsAdapter(private val listener: ItemsItemListener) : RecyclerView.Adapt
     @SuppressLint("SimpleDateFormat")
     fun convertLongToTime(time: Long): String {
         val date = Date(time)
-        val format = SimpleDateFormat("HH:mm aa")
+        val format = SimpleDateFormat("hh:mm aa")
         return format.format(date)
     }
 }
